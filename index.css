@@ -126,6 +126,9 @@ body{
         display: block;
         width: 150px;
     }
+    .encabezado{
+        justify-content: space-around;
+    }
     .encabezado__div{
         display: flex;
         flex-direction: row;
