@@ -19,13 +19,18 @@ body{
     grid-area: encabezado;
     height: 100px;
     background: linear-gradient(90deg, #DCF5DD 25%, #FFFFFF 49.6%, #DDF5DE 75%);
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.encabezadoDiv{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 20px;
-    
 }
+
 .encabezado__imagen{
     width: 60px;
 }
@@ -127,7 +132,13 @@ body{
         width: 150px;
     }
     .encabezado{
-        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .encabezadoDiv{
+        max-width: 860px;
+        width: 860px;
     }
     .encabezado__div{
         display: flex;
