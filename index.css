@@ -11,10 +11,76 @@ body{
     display: grid;
     grid-template-areas: "encabezado" "cuerpo" "pie";
     grid-template-columns: repeat(1,1fr);
-    grid-template-rows: 100px 600px auto;
+    grid-template-rows: 450px auto auto;
+
+    /*    grid-template-rows: 100px 600px auto; Para sitios normales
+        grid-template-rows: 450px 600px auto;
+
+    */
+}
+/*ENCABEZADO PARA EL INICIO*/
+#encabezado__home{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 20px 20px 0px 20px;
+    /* background: linear-gradient(to top, #DCF5DD 15%, #FFFFFF 15%, #DDF5DE 85%); */
+    background: linear-gradient(to top, #F4F4F4 20%, #DDF5DE 80%, #DDF5DE 70%, #DDF5DE 100%);
+}
+.encabezado__header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+    border-bottom: 0.5px solid #5A975E;
 }
 
-/*ENCABEZADO*/
+#encabezado__home .encabezado__descripcion{
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.encabezado__cuerpo{
+    margin: 20px 0px;
+}
+
+.encabezado__cuerpo div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.encabezado__cuerpo h1{
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+}
+.encabezado__cuerpo h1 span{
+    color: #5A975E;
+}
+
+.encabezado__cuerpo .auto{
+    margin: 0 auto;
+    margin-top: 40px;
+
+    width: 300px;
+    display: block;
+}
+.encabezado__boton{
+    display: block;
+    background-color: #72BBA8;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+/*ENCABEZADO - PARA OTRAS PAGINA*/
 .encabezado{
     grid-area: encabezado;
     height: 100px;
@@ -46,7 +112,38 @@ body{
     grid-area: cuerpo;
     background-color: #F4F4F4;
     position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.cuerpo__titulo{
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.servicios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;    
+}
+
+.servicios div{
+    text-align: center;
+}
+
+.servicios div img{
+    width: 100px;
+}
+.servicios div h2{
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+
 .cuerpo__mapa{
     width: 155px;
 }
