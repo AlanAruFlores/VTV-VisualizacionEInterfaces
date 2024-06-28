@@ -1,0 +1,232 @@
+/*CUERPO O CONTENIDO DE LA PAGINA*/
+.cuerpo {
+    grid-area: cuerpo;
+    background-color: #F4F4F4;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background: linear-gradient(white, #d3d3d3);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 420px;
+    height: 442px;
+}
+
+.login-container h1 {
+    color: #000000;
+}
+
+.login-container h2 {
+    color: #3d3d3dc1;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 19px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+label {
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 4px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 19px;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input[type="password"] {
+    width: calc(100% - 40px); /* Ajusta el ancho del campo de contraseña para dejar espacio para el botón */
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.password-container .toggle-password img {
+    width: 20px;
+    height: 20px;
+}
+
+.remember-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.remember-container input {
+    margin-right: 5px;
+}
+
+a {
+    color: #5DADE2;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    background-color: #58D68D;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+p {
+    margin-top: 20px;
+}
+
+p a {
+    color: #5DADE2;
+}
+
+/*PIE DE PAGINA*/
+.pie {
+    grid-area: pie;
+    background: linear-gradient(90deg, #DCF5DD 25%, #FFFFFF 49.6%, #DDF5DE 75%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pie__contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pie__columna p {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.pie__columna p img {
+    width: 25px;
+}
+
+.pie__mapa {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.derechos__reservados {
+    padding: 20px 0px;
+    border-top: solid 1px #41A595;
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+
+.derechos__reservados p {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 10px;
+}
+
+#mapa__computadora {
+    display: none;
+}
+
+.derechos__reservados .p__computadora {
+    display: none;
+}
+
+/*VISTA COMPUTADORA*/
+@media(min-width:950px) {
+    /*ENCABEZADO*/
+    #encabezado__mapa {
+        display: block;
+        width: 150px;
+    }
+    .encabezado {
+        justify-content: space-around;
+    }
+    .encabezado__div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /*CUERPO*/
+    #cuerpo__mapa__abajo {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    /*PIE DE PAGINA*/
+    #mapa__celular {
+        display: none;
+    }
+    #mapa__computadora {
+        display: block;
+    }
+    #mapa__computadora img {
+        width: 175px;
+    }
+    .pie {
+        padding: 20px 30px;
+        align-items: center;
+    }
+    .pie__contenedor {
+        flex-direction: row;
+    }
+    .derechos__reservados {
+        border-top: solid 1px #41A595;
+        max-width: 860px;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .derechos__reservados p {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        line-height: 10px;
+    }
+    .pie__columna {
+        width: 200px;
+    }
+    .derechos__reservados .p__celular {
+        display: none;
+    }
+    .derechos__reservados .p__computadora {
+        display: block;
+    }
+}
