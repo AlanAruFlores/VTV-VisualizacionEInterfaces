@@ -13,7 +13,11 @@
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 420px;
-    height: 442px;
+    margin: 2%;
+}
+
+.espacio{
+    height: 40px;
 }
 
 .login-container h1 {
@@ -70,6 +74,17 @@ input[type="text"] {
     font-size: 19px;
     margin: 3px;
 }
+select {
+    padding: 10px;
+    margin-bottom: 4px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 19px;
+    margin: 3px;
+    width: calc(100% - 280px);
+}
+
+
 
 .ingresarCentro{
     display: flex;
@@ -128,13 +143,31 @@ a {
     }
 
 button[type="submit"] {
-    background-color: #4A884F;
+    background-color: #65bc6ccd;
     color: white;
     padding: 10px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     margin-top: 10px;
+}
+
+.volverCentrado{
+    display: flex;
+    justify-content: center;
+}
+
+.volver{
+    background-color: #6aa4c7ab;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
 }
 
 p {

@@ -11,7 +11,7 @@ body{
     display: grid;
     grid-template-areas: "encabezado" "cuerpo" "pie";
     grid-template-columns: repeat(1,1fr);
-    grid-template-rows: 100px 600px auto;
+    grid-template-rows: 100px auto auto;
 }
 
 /*ENCABEZADO*/
