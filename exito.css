@@ -11,7 +11,7 @@ body{
     display: grid;
     grid-template-areas: "encabezado" "cuerpo" "pie";
     grid-template-columns: repeat(1,1fr);
-    grid-template-rows: 100px 600px auto;
+    grid-template-rows: 100px auto auto;
 }
 
 /*ENCABEZADO*/
@@ -66,6 +66,9 @@ body{
     width: 200px;
 
 }
+#perfilComputadora{
+    display: none;
+}
 
 
 .cuerpo__usuario{
@@ -101,6 +104,9 @@ body{
 }
 .cuerpo__menu img{
     width: 35px;
+}
+.cuerpo__menu .icono__texto{
+    display: none;
 }
 .cuerpo__menu a{
     display: flex;
@@ -208,6 +214,18 @@ body{
 
 /*VISTA COMPUTADORA*/
 @media(min-width:950px){
+
+    #perfilCelular{
+        display: none;
+    }
+    
+    #perfilComputadora{
+        display: flex;
+        margin: 0;
+        width: 100%;
+        background: linear-gradient(90deg, rgba(244, 244, 244, 0.11) 0%, rgba(115, 115, 115, 0.11) 100%);
+    }
+
     /*ENCABEZADO*/
     #encabezado__mapa{
         display: block;
@@ -238,6 +256,114 @@ body{
         
     }
 
+    /*CUERPO O CONTENIDO DE LA PAGINA*/
+
+    .cuerpo__mapa{
+        width: 155px;
+    }
+    .cuerpo__contenedor{
+        max-width: 860px;
+        width: 860px;
+        max-width: 860px;
+        height: 415px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .cuerpo__menu{
+        /* height: auto; */
+        margin: 0;
+        height: 415px;
+        max-height: 415px;
+        display: flex;
+        flex-direction:column;
+        justify-content: start;
+        align-items: start;
+        gap: 0px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        width: 25%;
+    }
+
+    .cuerpo__menu img{
+        width: 35px;
+    }
+    .cuerpo__menu .icono__texto{
+        display: block;
+        color: #000000;
+        font-size: 20px;
+    }
+    .cuerpo__menu a{
+        margin-top: 3px;
+        text-decoration: none;
+        display: flex;
+        gap: 10px;
+        height: 100%;
+        width: 100%;
+        background-color: #dfdede;
+        padding: 8px 7px;
+        box-shadow: -1px 4px 6px #8d8d8d;
+    }
+    #link__pintado{
+        background-color: #86d28b80;
+    }
+
+
+    /*EXITO*/
+    .cuerpo__exito{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0px;
+        background: linear-gradient(90deg, rgba(244, 244, 244, 0.11) 0%, rgba(115, 115, 115, 0.11) 100%);
+        max-height: 415px;
+        height: 415px;
+        width: 650px;
+        max-width: 650px;
+    }
+    .cuerpo__exito h1{
+        text-align: center;
+        font-weight: bold;
+    }
+    .cuerpo__exito img{
+        margin-top: 20px;
+    }
+    .cuerpo__exito p{
+        color: #504f4f;
+        text-align: center;
+    }
+
+    .exito__botones{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .exito__boton{
+        background-color: #DCF5DD;
+        color: #000000;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 10px;
+    }
+    .volver{
+        background-color: #4A884F;
+        color: #FFFFFF;
+        padding: 10px 30px;
+
+    }
+    .descargar{
+        background-color: #95C8E5;
+    }
+
+
+
+
     /*PIE DE PAGINA*/
     #mapa__celular{
         display: none;
@@ -251,6 +377,8 @@ body{
     .pie{
         padding: 20px 30px;
         align-items: center;
+        height: 100%;
+
     }
     .pie__contenedor{
         flex-direction: row;
@@ -278,5 +406,15 @@ body{
     .derechos__reservados .p__computadora{
         display: block;
     }
-
+    @media(min-height:850px) {
+        body{
+            grid-template-rows: 100px auto 400px;
+        }
+    }
+    
+    @media(min-height:950px) {
+        body{
+            grid-template-rows: 100px auto 600px;
+        }
+    }
 }
