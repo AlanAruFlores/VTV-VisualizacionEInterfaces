@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/index.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <title>VTV - Regristro</title>
 </head>
 <body>
     <header class="encabezado">
@@ -19,6 +20,58 @@
     </header>
 
     <main class="cuerpo">
+        <div class="login-container">
+            <h1>Bienvenidos al portal</h1>
+            <h2>Registre su usuario.</h2>
+            <form>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                <p>Ingrese al menos 6 caracteres que contenga una mayúscula,una minúscula y números
+                </p>
+
+                <div class="password-container">
+                    <label for="password"></label>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    <div class="ojo">
+                        <button type="button" class="toggle-password" onclick="togglePassword()">
+                            <img src="/iconos/ojo.png" alt="Mostrar contraseña">
+                        </button>
+                    </div>
+                </div>
+                <div class="password-container">
+                    <label for="password"></label>
+                    <input type="password" id="password" name="password" placeholder="Repetir contraseña" required>
+                    <div class="ojo">
+                        <button type="button" class="toggle-password" onclick="togglePassword()">
+                            <img src="/iconos/ojo.png" alt="Mostrar contraseña">
+                        </button>
+                    </div>
+                </div>
+                <div class="espacio"></div>
+
+                <input type="text" id="nombre" name="Nombre" placeholder="Nombre" required>
+                <input type="text" id="apellido" name="Apellido" placeholder="Apellido" required>
+                <input type="number" id="dni" name="DNI" placeholder="DNI" required>
+                <input type="number" id="celular" name="Celular" placeholder="Celular" required>
+
+
+
+                <div class="remember-container">
+                    <div class="recordar">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Recordar Usuario</label>
+                    </div>
+
+                    <a href="contrasenia.html">¿Olvidaste tu contraseña?</a>
+                </div>
+                <div class="ingresarCentro">
+                    <button type="submit" class="ingresar">Ingresar</button>
+                </div>
+
+            </form> 
+            <p>¿No tienes una cuenta? <a href="registro.html">Regístrate</a></p>
+        </div>
+    
         <img src="/imagenes/mapa__oeste__encabezado.svg" id="cuerpo__mapa__arriba" class="cuerpo__mapa">
         <img src="/imagenes/mapa__oeste__pie.svg" id="cuerpo__mapa__abajo" class="cuerpo__mapa">
     </main>

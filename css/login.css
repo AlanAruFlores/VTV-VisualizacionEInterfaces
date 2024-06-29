@@ -25,6 +25,12 @@
     margin-bottom: 20px;
 }
 
+.login-container p {
+    margin-bottom: 20px;
+    margin-top: 75px;
+    font-weight: 600;
+}
+
 h2 {
     font-size: 19px;
 }
@@ -35,6 +41,18 @@ form {
     align-items: stretch;
 }
 
+form .ingresar{
+    width: 200px;
+}
+.ojo{
+    background-color: #95C8E5;
+    width: 42px;
+    height: 42px;
+    border-radius: 30px;
+    position: absolute;
+    top: 8%;
+    left: 90%;
+}
 label {
     color: #333;
     margin-bottom: 5px;
@@ -43,12 +61,20 @@ label {
 
 input[type="email"],
 input[type="password"],
+input[type="number"],
 input[type="text"] {
     padding: 10px;
     margin-bottom: 4px;
     border: 1px solid #ccc;
     border-radius: 30px;
     font-size: 19px;
+    margin: 3px;
+}
+
+.ingresarCentro{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
 }
 
 .password-container {
@@ -56,12 +82,16 @@ input[type="text"] {
 }
 
 .password-container input[type="password"] {
-    width: calc(100% - 40px); /* Ajusta el ancho del campo de contraseña para dejar espacio para el botón */
+    width: calc(100% - 0px);
+}
+
+.password-container input[type="text"] {
+    width: calc(100% - 0px);
 }
 
 .password-container .toggle-password {
     position: absolute;
-    right: 10px;
+    right: 5px;
     top: 50%;
     transform: translateY(-50%);
     background: none;
@@ -70,14 +100,15 @@ input[type="text"] {
 }
 
 .password-container .toggle-password img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
 }
 
 .remember-container {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 .remember-container input {
@@ -87,15 +118,21 @@ input[type="text"] {
 a {
     color: #5DADE2;
     text-decoration: none;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    margin-top: 4px;
+
 }
 
+.recordar{
+    margin-right: 20px;
+    }
+
 button[type="submit"] {
-    background-color: #58D68D;
+    background-color: #4A884F;
     color: white;
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     margin-top: 10px;
 }
@@ -105,7 +142,7 @@ p {
 }
 
 p a {
-    color: #5DADE2;
+    color: #4A884F;
 }
 
 /*PIE DE PAGINA*/

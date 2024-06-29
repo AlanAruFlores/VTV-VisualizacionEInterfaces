@@ -30,21 +30,27 @@
                 <div class="password-container">
                     <label for="password"></label>
                     <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                    <button type="button" class="toggle-password" onclick="togglePassword()">
-                        <img src="/iconos/ojo.png" alt="Mostrar contraseña">
-                    </button>
+                    <div class="ojo">
+                        <button type="button" class="toggle-password" onclick="togglePassword()">
+                            <img src="/iconos/ojo.png" alt="Mostrar contraseña">
+                        </button>
+                    </div>
                 </div>
     
                 <div class="remember-container">
-                    <input type="checkbox" id="remember" name="remember">
-                    <label for="remember">Recordar Usuario</label>
+                    <div class="recordar">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Recordar Usuario</label>
+                    </div>
+
+                    <a href="contrasenia.html">¿Olvidaste tu contraseña?</a>
                 </div>
-    
-                <a href="#">¿Olvidaste tu contraseña?</a>
-    
-                <button type="submit">Iniciar Sesión</button>
+                <div class="ingresarCentro">
+                    <button type="submit" class="ingresar">Ingresar</button>
+                </div>
+
             </form>
-            <p>¿No tienes una cuenta? <a href="#">Regístrate</a></p>
+            <p>¿No tienes una cuenta? <a href="registro.html">Regístrate</a></p>
         </div>
     
         <img src="/imagenes/mapa__oeste__encabezado.svg" id="cuerpo__mapa__arriba" class="cuerpo__mapa">
