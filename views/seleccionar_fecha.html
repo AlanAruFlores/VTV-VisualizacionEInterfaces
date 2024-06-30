@@ -4,7 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/seleccionar_fecha.css">
-    <title>Document</title>
+    <title>Solicitar Turno</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .formulario label {
+            margin-right: 10px;
+        }
+        .selector-horario {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
 </head>
 <body>
     <header class="encabezado">
@@ -24,8 +40,21 @@
         <img src="../imagenes/mapa__oeste__encabezado.svg" id="cuerpo__mapa__arriba" class="cuerpo__mapa">
         <img src="../imagenes/mapa__oeste__pie.svg" id="cuerpo__mapa__abajo" class="cuerpo__mapa">
 
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar">0%</div>
+        </div>
+        <div class="progress-text" id="progress-text">Progreso: 0%</div>
+
+        <!-- Botones para demo -->
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="updateProgress(10)">10%</button>
+            <button onclick="updateProgress(30)">30%</button>
+            <button onclick="updateProgress(50)">50%</button>
+            <button onclick="updateProgress(70)">70%</button>
+            <button onclick="updateProgress(100)">100%</button>
+        </div>
         <!--Mobile-->
-        <div class="cuerpo__usuario"  id="perfilCelular">
+        <div class="cuerpo__usuario" id="perfilCelular">
             <img src="../iconos/menu/usuario.svg" alt="usuario">
             <div>
                 <p>Roberto Carlos</p>
@@ -42,45 +71,21 @@
                         <p id="dni">DNI:41032589</p>
                     </div>
                 </div>
-                <a href="" id="link__pintado"><img src="../iconos/menu/home.svg" alt="" srcset=""><span class="icono__texto">Inicio</span></a>
-                <a href=""><img src="../iconos/menu/bus.svg" alt="" srcset=""><span class="icono__texto">Vehiculos</span></a>
-                <a href=""><img src="../iconos/menu/escudo.svg" alt="" srcset=""><span class="icono__texto">Multas</span></a>
-                <a href=""><img src="../iconos/menu/reloj.svg" alt="" srcset=""><span class="icono__texto">Historial</span></a>
-                <a href=""><img src="../iconos/menu/ayuda.svg" alt="" srcset=""><span class="icono__texto">Ayuda</span></a>
-                <a href=""><img src="../iconos/menu/salir.svg" alt="" srcset=""><span class="icono__texto">Salir</span></a>
+                <a href="" id="link__pintado"><img src="../iconos/menu/home.svg" alt=""><span class="icono__texto">Inicio</span></a>
+                <a href=""><img src="../iconos/menu/bus.svg" alt=""><span class="icono__texto">Vehículos</span></a>
+                <a href=""><img src="../iconos/menu/escudo.svg" alt=""><span class="icono__texto">Multas</span></a>
+                <a href=""><img src="../iconos/menu/reloj.svg" alt=""><span class="icono__texto">Historial</span></a>
+                <a href=""><img src="../iconos/menu/ayuda.svg" alt=""><span class="icono__texto">Ayuda</span></a>
+                <a href=""><img src="../iconos/menu/salir.svg" alt=""><span class="icono__texto">Salir</span></a>
             </div>
             <div class="cuerpo__turno">
                 <h1>Solicitar turno</h1>
                 <div class="formulario">
                     <div>
-                        <label for="mes">Mes:</label>
-                        <select id="mes" name="mes">
-                            <option value="1">Enero</option>
-                            <option value="2">Febrero</option>
-                            <option value="3">Marzo</option>
-                            <option value="4">Abril</option>
-                            <option value="5">Mayo</option>
-                            <option value="6">Junio</option>
-                            <option value="7">Julio</option>
-                            <option value="8">Agosto</option>
-                            <option value="9">Septiembre</option>
-                            <option value="10">Octubre</option>
-                            <option value="11">Noviembre</option>
-                            <option value="12">Diciembre</option>
-                        </select>
+                        <label for="datepicker">Fecha:</label>
+                        <input type="text" id="datepicker" name="fecha">
                     </div>
-
-                    <div>
-                        <label for="dia">Día:</label>
-                        <select id="dia" name="dia">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <!-- Agrega aquí los días del mes correspondiente, dependiendo del mes seleccionado -->
-                        </select>
-                        
-                    </div>
-                    <div>
+                    <div class="selector-horario">
                         <label for="horario">Horario:</label>
                         <select id="horario" name="horario">
                             <option value="08:00">08:00</option>
@@ -92,16 +97,14 @@
                             <option value="14:00">14:00</option>
                             <option value="15:00">15:00</option>
                             <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
                         </select>
                     </div>
-                   
                 </div>
-                <a href="#" class="boton__fecha">Verificar disponibilidad</a>
+                <a href="seleccionar_vehiculo.html" class="boton__fecha">Solicitar turno</a>
             </div> 
         </div>
-
-        
-        
     </main>
 
     <footer class="pie">
@@ -109,7 +112,6 @@
             <div class="pie__columna" id="mapa__computadora">
                 <img src="../imagenes/mapa_computadora.svg" class="pie__mapa" alt="mapa">
             </div>
-    
             <div class="pie__columna">
                 <h3>Secciones</h3>
                 <p>Ayuda</p>
@@ -119,15 +121,15 @@
             </div>
             <div class="pie__columna">
                 <h3>Contacto</h3>
-                <p><img src="../iconos/correo.svg" alt="correo"> Correo electronico</p>
-                <p><img src="../iconos/whatsapp.svg" alt="whatssap"> Whatsapp</p>
+                <p><img src="../iconos/correo.svg" alt="correo"> Correo electrónico</p>
+                <p><img src="../iconos/whatsapp.svg" alt="whatsapp"> Whatsapp</p>
             </div>
             <div class="pie__columna">
                 <h3>Redes</h3>
-                <p><img src="../iconos/twitter.svg" alt="correo"> Twitter (X)</p>
-                <p><img src="../iconos/youtube.svg" alt="whatssap"> Youtube</p>
-                <p><img src="../iconos/instagram.svg" alt="correo"> Instagram</p>
-                <p><img src="../iconos/facebook.svg" alt="whatssap"> Facebook</p>
+                <p><img src="../iconos/twitter.svg" alt="twitter"> Twitter (X)</p>
+                <p><img src="../iconos/youtube.svg" alt="youtube"> Youtube</p>
+                <p><img src="../iconos/instagram.svg" alt="instagram"> Instagram</p>
+                <p><img src="../iconos/facebook.svg" alt="facebook"> Facebook</p>
             </div>
             <div class="pie__columna" id="mapa__celular">
                 <img src="../imagenes/mapa_celular.svg" class="pie__mapa" alt="mapa">
@@ -136,9 +138,30 @@
         <div class="derechos__reservados">
             <p class="p__celular">&#169; Departamento del Oeste - 2024</p>
             <p class="p__celular">Todos los derechos Reservados</p>
- 
             <p class="p__computadora">&#169; Departamento del Oeste - 2024 Todos los derechos Reservados</p>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(function() {
+            $("#datepicker").datepicker({
+                dateFormat: "dd-mm-yy",
+                changeMonth: true,
+                changeYear: true
+            });
+        });
+
+
+        function updateProgress(percentage) {
+            const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
+            progressBar.style.width = percentage + '%';
+            progressBar.textContent = percentage + '%';
+            progressText.textContent = 'Progreso: ' + percentage + '%';
+        }
+
+    </script>
 </body>
 </html>
