@@ -226,7 +226,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url(imagenes/home.svg);
+    background-image: url(../imagenes/home.svg);
     padding: 40px 20px;
     max-width: 523px;
 
