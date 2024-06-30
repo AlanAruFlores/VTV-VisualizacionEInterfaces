@@ -151,32 +151,6 @@ body{
     border-radius: 20px;
 }
 
-
-.exito__botones{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-}
-
-.exito__boton{
-    background-color: #DCF5DD;
-    color: #000000;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 10px;
-}
-.volver{
-    background-color: #4A884F;
-    color: #FFFFFF;
-}
-.descargar{
-    background-color: #95C8E5;
-}
-
-
-
 /*PIE DE PAGINA*/
 .pie{
     grid-area: pie;
@@ -331,7 +305,7 @@ body{
 
 
     /*EXITO*/
-    .cuerpo__exito{
+    .cuerpo__confirmacion{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -343,47 +317,35 @@ body{
         width: 650px;
         max-width: 650px;
     }
-    .cuerpo__exito h1{
-        text-align: center;
+    .cuerpo__confirmacion h1{
+        text-align: start;
         font-weight: bold;
+        margin-top: 25px;
     }
-    .cuerpo__exito img{
+    .cuerpo__confirmacion img{
         margin-top: 20px;
     }
-    .cuerpo__exito p{
-        color: #504f4f;
-        text-align: center;
-    }
-
-    .exito__botones{
-        margin-top: 40px;
-        display: flex;
+    .confirmacion__div{
         flex-direction: row;
-        justify-content: center;
-        gap: 30px;
-        text-align: center;
-        width: 100%;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin: 20px 0px;
     }
-
-    .exito__boton{
-        background-color: #DCF5DD;
-        color: #000000;
-        text-decoration: none;
-        padding: 10px 15px;
-        border-radius: 10px;
+    .confirmacion__info{
+        line-height: 23px;
     }
-    .volver{
-        background-color: #4A884F;
-        color: #FFFFFF;
-        padding: 10px 30px;
-
-    }
-    .descargar{
+    .confirmacion__boton{
         background-color: #95C8E5;
+        color: #000000;
+        padding: 15px 40px;
+        text-decoration: none;
+        margin: 0px;
+        position: relative;
+        bottom: 20px;
+        font-weight: bold;
+        font-size: 13px;
+        border-radius: 20px;
     }
-
-
-
 
     /*PIE DE PAGINA*/
     #mapa__celular{
