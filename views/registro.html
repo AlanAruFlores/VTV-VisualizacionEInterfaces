@@ -68,8 +68,7 @@
                     <button type="submit" class="ingresar">Ingresar</button>
                 </div>
                 <div class="volverCentrado">
-                    <button type="" class="volver">volver</button>
-
+                    <a href="/index.html" class="volver">volver</a>
                 </div>
 
             </form> 
@@ -117,4 +116,17 @@
         </div>
     </footer>
 </body>
+<script>
+    function togglePassword() {
+        const passwordInput = document.getElementById('password');
+        const passwordToggle = document.querySelector('.toggle-password img');
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            passwordToggle.src = '/iconos/ojo.png';
+        } else {
+            passwordInput.type = 'password';
+            passwordToggle.src = '/iconos/ojo.png'; // Cambia el icono a "ojo abierto"
+        }
+    }
+</script>
 </html>

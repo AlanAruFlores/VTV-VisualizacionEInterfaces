@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/generico.css">
+    <link rel="stylesheet" href="/css/login.css">
     <title>Document</title>
 </head>
 <body>
@@ -21,6 +22,28 @@
     <main class="cuerpo">
         <img src="/imagenes/mapa__oeste__encabezado.svg" id="cuerpo__mapa__arriba" class="cuerpo__mapa">
         <img src="/imagenes/mapa__oeste__pie.svg" id="cuerpo__mapa__abajo" class="cuerpo__mapa">
+
+        <div class="login-container" style="margin: 10%;">
+            <h1>Restaurar Contraseña</h1>
+            <h2>Introduzca su mail</h2>
+                <form action="/restaurar_contraseña" method="post">
+                    <input type="email" id="email" name="email" required placeholder="Correo Electrónico">
+                        <br>
+                    <button type="submit" style="background-color:rgba(106, 201, 228, 0.759)";
+                    >Enviar codigo</button>
+                </form>
+               
+                        <br> <hr><br>
+                <form action="/restaurar_contraseña" method="post">
+                    <input type="email" id="email" name="email" required placeholder="Codigo">
+                        <br>
+                    <button type="submit">Restaurar contraseña</button>
+                </form>
+                <br> <hr><br>
+                   <div class="volverCentrado">
+                        <a href="/index.html" class="volver">volver</a>
+                    </div>
+        </div>
     </main>
 
     <footer class="pie">

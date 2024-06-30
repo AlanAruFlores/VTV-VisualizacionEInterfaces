@@ -45,8 +45,17 @@ form {
     align-items: stretch;
 }
 
-form .ingresar{
+.ingresar{
     width: 200px;
+    background-color: #4A884F;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 .ojo{
     background-color: #95C8E5;
@@ -150,6 +159,10 @@ button[type="submit"] {
     border-radius: 10px;
     cursor: pointer;
     margin-top: 10px;
+}
+
+button:hover{
+    background-color: #65bc6c92;
 }
 
 .volverCentrado{
