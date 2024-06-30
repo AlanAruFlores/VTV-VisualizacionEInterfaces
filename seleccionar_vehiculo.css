@@ -218,9 +218,24 @@ background-color: #4A884F;
     transform: rotate(45deg);
 }
 
-.cuerpo__vehiculo label{
+.cuerpo__vehiculo .td__checkbox{
     position: relative;
-    left: 30px;
+}
+.cuerpo__vehiculo label{
+    position: absolute;
+
+  
+
+}
+.cuerpo__vehiculo .input__asignar{
+    position: absolute;    
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0px; 
+    width: 30%;
+
 }
 
 .vehiculo__boton{
@@ -404,10 +419,60 @@ background-color: #4A884F;
         max-width: 650px;
     }
     .cuerpo__vehiculo h1{
-        text-align: center;
-        font-weight: bold;
+        text-align: left;
+        font-weight: 400;
+        position: relative;
+        right: 140px;
+        top: 5px;
+        font-size: 30px;
+        
     }
 
+
+    .cuerpo__vehiculo p{
+        color: #504f4f;
+    }
+    
+    .cuerpo__vehiculo table{
+        margin-top: 20px;
+        width: 80%;
+        border-collapse: collapse;
+    }
+    
+    .cuerpo__vehiculo table td,th{
+        padding: 10px 0px;
+        border: 1px solid #0000007a;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+    }
+    .cuerpo__vehiculo table thead tr{
+        background-color: #86D28B;
+    }
+    .cuerpo__vehiculo table td{
+        background-color: #D9D9D9;
+    }
+    .vehiculo__boton{
+        position: relative;
+        background-color: #95C8E5;
+        padding: 10px 30px;
+        text-decoration: none;
+        color: #000000;
+        border-radius: 15px;
+        margin: 20px 0px;
+        top: 15px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .cuerpo__vehiculo .input__asignar{
+        position: absolute;
+        left:0;
+        right:0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        top: -8px;
+    }
 
     /*PIE DE PAGINA*/
     #mapa__celular{
