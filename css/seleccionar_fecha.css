@@ -118,7 +118,7 @@ body{
     height: 70px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     gap: 10px;
     background: linear-gradient(90deg, rgba(244, 244, 244, 0.11) 0%, rgba(115, 115, 115, 0.11) 100%);
