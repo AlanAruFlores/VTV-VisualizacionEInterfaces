@@ -117,41 +117,99 @@ body{
     background-color: #86D28B;
 }
 
-.cuerpo__exito{
+.cuerpo__asignar{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 30px 0px;
 }
-.cuerpo__exito h1{
+.cuerpo__asignar h1{
     text-align: center;
     font-weight: 400;
 }
-.cuerpo__exito p{
-    color: #504f4f;
+
+.input__asignar{
+    margin: 20px 0px;
+    display: block;
+    height: 30px;
+    font-size: 18px;
+    position: relative;
+    padding-left: 35px;
+    line-height: 30px;
+    margin-bottom: 40px;
+    cursor: pointer;    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.exito__botones{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
+.input__asignar input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius:8px;
+    border: 2px solid #000000;
+    padding: 12px;
 }
 
-.exito__boton{
-    background-color: #DCF5DD;
-    color: #000000;
+/* On mouse-over, add a grey background color */
+.input__asignar:hover input ~ .checkmark {
+background-color: transparent;
+}
+
+/* When the checkbox is checked, add a blue background */
+.input__asignar input:checked ~ .checkmark {
+background-color: #4A884F;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.input__asignar input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.input__asignar .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.asignar__boton{
+    display: block;
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 10px;
-}
-.volver{
-    background-color: #4A884F;
-    color: #FFFFFF;
-}
-.descargar{
+    text-align: center;
     background-color: #95C8E5;
+    color: #000000;
+    padding: 15px 0px;
+    width: 200px;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 20px;
+    margin: 20px auto;
 }
 
 
@@ -309,60 +367,56 @@ body{
     }
 
 
-    /*EXITO*/
-    .cuerpo__exito{
+    /*ASIGNAR*/
+    .cuerpo__asignar{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: start;
+        justify-content: start;
         margin: 30px 0px;
         background: linear-gradient(90deg, rgba(244, 244, 244, 0.11) 0%, rgba(115, 115, 115, 0.11) 100%);
         max-height: 415px;
         height: 415px;
         width: 650px;
         max-width: 650px;
+        padding: 40px 20px;
     }
-    .cuerpo__exito h1{
-        text-align: center;
-        font-weight: bold;
+    .cuerpo__asignar h1{
+        text-align: left;
+        font-weight: 400;
     }
-    .cuerpo__exito img{
+    .cuerpo__asignar img{
         margin-top: 20px;
     }
-    .cuerpo__exito p{
-        color: #504f4f;
-        text-align: center;
-    }
-
-    .exito__botones{
-        margin-top: 40px;
+    .cuerpo__asignar__div{
+        margin-top: 60px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        gap: 30px;
-        text-align: center;
         width: 100%;
-    }
-
-    .exito__boton{
-        background-color: #DCF5DD;
-        color: #000000;
-        text-decoration: none;
-        padding: 10px 15px;
-        border-radius: 10px;
-    }
-    .volver{
-        background-color: #4A884F;
-        color: #FFFFFF;
-        padding: 10px 30px;
-
-    }
-    .descargar{
-        background-color: #95C8E5;
+        height: 300px;
     }
 
 
-
+    .input__asignar{
+        margin: 10px 0px;
+        display: block;
+        height: 30px;
+        font-size: 18px;
+        position: relative;
+        padding-left: 35px;
+        line-height: 30px;
+        cursor: pointer;    
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        width: 270px;
+    }
+    .asignar__boton{
+        margin-top: 100px;
+    }
 
     /*PIE DE PAGINA*/
     #mapa__celular{

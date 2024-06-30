@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="exito.css">
+    <link rel="stylesheet" href="seleccionar_fecha.css">
     <title>Document</title>
 </head>
 <body>
@@ -49,14 +49,54 @@
                 <a href=""><img src="iconos/menu/ayuda.svg" alt="" srcset=""><span class="icono__texto">Ayuda</span></a>
                 <a href=""><img src="iconos/menu/salir.svg" alt="" srcset=""><span class="icono__texto">Salir</span></a>
             </div>
-            <div class="cuerpo__exito">
-                <h1>¡Turno solicitado correctamente!</h1>
-                <img src="imagenes/exito.svg" alt="exito">
-                <p>Turno: 3821383</p>
-                <div class="exito__botones">
-                    <a href="#" class="exito__boton volver">Volver a inicio</a>
-                    <a href="#" class="exito__boton descargar">Descargar comprobante</a>
+            <div class="cuerpo__turno">
+                <h1>Solicitar turno</h1>
+                <div class="formulario">
+                    <div>
+                        <label for="mes">Mes:</label>
+                        <select id="mes" name="mes">
+                            <option value="1">Enero</option>
+                            <option value="2">Febrero</option>
+                            <option value="3">Marzo</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Mayo</option>
+                            <option value="6">Junio</option>
+                            <option value="7">Julio</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Septiembre</option>
+                            <option value="10">Octubre</option>
+                            <option value="11">Noviembre</option>
+                            <option value="12">Diciembre</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="dia">Día:</label>
+                        <select id="dia" name="dia">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <!-- Agrega aquí los días del mes correspondiente, dependiendo del mes seleccionado -->
+                        </select>
+                        
+                    </div>
+                    <div>
+                        <label for="horario">Horario:</label>
+                        <select id="horario" name="horario">
+                            <option value="08:00">08:00</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                        </select>
+                    </div>
+                   
                 </div>
+                <a href="#" class="boton__fecha">Verificar disponibilidad</a>
             </div> 
         </div>
 

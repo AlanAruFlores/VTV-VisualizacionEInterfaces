@@ -117,42 +117,47 @@ body{
     background-color: #86D28B;
 }
 
-.cuerpo__exito{
+.cuerpo__planta{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 30px 0px;
 }
-.cuerpo__exito h1{
+.cuerpo__planta h1{
     text-align: center;
     font-weight: 400;
 }
-.cuerpo__exito p{
-    color: #504f4f;
-}
 
-.exito__botones{
-    margin-top: 20px;
+.planta__formulario{
     display: flex;
     flex-direction: column;
-    text-align: center;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+.planta__formulario label{
+    display: block;
+}
+.planta__formulario select{
+    width: 200px;
+    border: none;
+    height: 40px;
+    font-size: 17px;
+    padding: 0px 10px;
+    border-radius: 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #838383;
+}
+.planta__boton{
+    text-decoration: none;
+    color: #000000;
+    background-color: #95C8E5;
+    padding: 10px 30px;
+    border-radius: 40px;
+    margin-top: 30px;
+    font-weight: bold;
 }
 
-.exito__boton{
-    background-color: #DCF5DD;
-    color: #000000;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 10px;
-}
-.volver{
-    background-color: #4A884F;
-    color: #FFFFFF;
-}
-.descargar{
-    background-color: #95C8E5;
-}
 
 
 
@@ -310,7 +315,7 @@ body{
 
 
     /*EXITO*/
-    .cuerpo__exito{
+    .cuerpo__planta{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -322,47 +327,14 @@ body{
         width: 650px;
         max-width: 650px;
     }
-    .cuerpo__exito h1{
-        text-align: center;
-        font-weight: bold;
+    .cuerpo__planta h1{
+        text-align: left;
+        font-weight: 400;
+        padding: 0px 20px;
+        font-size: 27px;
+        position: relative;
+        bottom: 30px;
     }
-    .cuerpo__exito img{
-        margin-top: 20px;
-    }
-    .cuerpo__exito p{
-        color: #504f4f;
-        text-align: center;
-    }
-
-    .exito__botones{
-        margin-top: 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 30px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .exito__boton{
-        background-color: #DCF5DD;
-        color: #000000;
-        text-decoration: none;
-        padding: 10px 15px;
-        border-radius: 10px;
-    }
-    .volver{
-        background-color: #4A884F;
-        color: #FFFFFF;
-        padding: 10px 30px;
-
-    }
-    .descargar{
-        background-color: #95C8E5;
-    }
-
-
-
 
     /*PIE DE PAGINA*/
     #mapa__celular{
