@@ -1,7 +1,6 @@
 .cuerpo__turno{
     gap: 20px;
 }
-
 .formulario {
     display: flex;
     flex-direction: column;
