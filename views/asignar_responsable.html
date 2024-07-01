@@ -1,108 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/asignar_responsable.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Hoja CSS personalizada para este HTML -->
+    <link rel="stylesheet" href="../css/asignar_responsable.css" />
+    <!-- Hoja CSS con estilos globales (navbar,footer) -->
+    <link rel="stylesheet" href="../mainStyles.css" />
+    <!-- UniIcon CDN Link  -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="encabezado">
-        <div class="encabezadoDiv">
-            <img src="../imagenes/logo.png" class="encabezado__imagen">
-            <div class="encabezado__div">
-                <img src="../imagenes/mapa.svg" alt="mapa" id="encabezado__mapa">
-                <div class="encabezado__descripcion">
-                    <p class="encabezado__parrafo">Departamento del Oeste</p>
-                    <p class="encabezado__parrafo encabezado__parrafo__dos">Buenos Aires</p> 
-                </div>
-            </div>
+      <div class="encabezado__izquierda">
+        <a href="/index.html">
+          <img src="../imagenes/logo.png" class="encabezado__imagen" />
+        </a>
+        <div class="encabezado__derecha">
+          <img src="../imagenes/mapa.svg" alt="mapa" id="encabezado__mapa" />
+          <div class="encabezado__descripcion">
+            <p class="encabezado__parrafo">Departamento del Oeste</p>
+            <p class="encabezado__parrafo encabezado__parrafo__dos">
+              Buenos Aires
+            </p>
+          </div>
         </div>
+      </div>
     </header>
 
     <main class="cuerpo">
-        <img src="../imagenes/mapa__oeste__encabezado.svg" id="cuerpo__mapa__arriba" class="cuerpo__mapa">
-        <img src="../imagenes/mapa__oeste__pie.svg" id="cuerpo__mapa__abajo" class="cuerpo__mapa">
+      <img
+        src="../imagenes/mapa__oeste__encabezado.svg"
+        id="cuerpo__mapa__arriba"
+        class="cuerpo__mapa"
+      />
+      <img
+        src="../imagenes/mapa__oeste__pie.svg"
+        id="cuerpo__mapa__abajo"
+        class="cuerpo__mapa"
+      />
 
-        <!--Mobile-->
-        <div class="cuerpo__usuario"  id="perfilCelular">
-            <img src="../iconos/menu/usuario.svg" alt="usuario">
+      <!--Mobile-->
+      <div class="cuerpo__usuario" id="perfilCelular">
+        <img src="../iconos/menu/usuario.svg" alt="usuario" />
+        <div>
+          <p>Roberto Carlos</p>
+          <p id="dni">DNI:41032589</p>
+        </div>
+      </div>
+
+      <div class="cuerpo__contenedor">
+        <div class="cuerpo__menu">
+          <div class="cuerpo__usuario" id="perfilComputadora">
+            <img src="../iconos/menu/usuario.svg" alt="usuario" />
             <div>
-                <p>Roberto Carlos</p>
-                <p id="dni">DNI:41032589</p>
+              <p>Roberto Carlos</p>
+              <p id="dni">DNI:41032589</p>
             </div>
+          </div>
+          <div class="cuerpo__links">
+            <a href="" class="cuerpo__link link_activo"
+              ><img src="../iconos/menu/home.svg" alt="" srcset="" /><span
+                class="icono__texto"
+                >Inicio</span
+              ></a
+            >
+            <a href="" class="cuerpo__link"
+              ><img src="../iconos/menu/bus.svg" alt="" srcset="" /><span
+                class="icono__texto"
+                >Vehiculos</span
+              ></a
+            >
+            <a href="" class="cuerpo__link"
+              ><img src="../iconos/menu/escudo.svg" alt="" srcset="" /><span
+                class="icono__texto"
+                >Multas</span
+              ></a
+            >
+            <a href="" class="cuerpo__link"
+              ><img src="../iconos/menu/reloj.svg" alt="" srcset="" /><span
+                class="icono__texto"
+                >Historial</span
+              ></a
+            >
+            <a href="" class="cuerpo__link"
+              ><img src="../iconos/menu/ayuda.svg" alt="" srcset="" /><span
+                class="icono__texto"
+                >Ayuda</span
+              ></a
+            >
+            <a href="" class="cuerpo__link"
+              ><img src="../iconos/menu/salir.svg" alt="" srcset="" /><span
+                class="icono__texto"
+                >Salir</span
+              ></a
+            >
+          </div>
         </div>
+        <div class="cuerpo__asignar cuerpo__contenido-principal">
+          <!-- BARRA DE PROGRESO -->
+          <div class="bar_container">
+            <i class="uil uil-schedule bar_icon bar_item bar_item_active"></i>
+            <span class="linea1 bar_item bar_line bar_item_active"></span>
+            <i class="uil uil-car bar_icon bar_item bar_item_active"></i>
+            <span class="linea2 bar_item bar_line bar_item_active"></span>
+            <i class="uil uil-map-marker bar_icon bar_item bar_item_active"></i>
+            <span class="linea3 bar_item bar_line bar_item_active"></span>
+            <i class="uil uil-user bar_icon bar_item"></i>
+            <span class="linea4 bar_item bar_line"></span>
+            <i class="uil uil-check-circle bar_icon bar_item"></i>
+          </div>
+          <h1>Indique quien realiza la verificacion</h1>
 
-        <div class="cuerpo__contenedor">
-            <div class="cuerpo__menu">
-                <div class="cuerpo__usuario" id="perfilComputadora">
-                    <img src="../iconos/menu/usuario.svg" alt="usuario">
-                    <div>
-                        <p>Roberto Carlos</p>
-                        <p id="dni">DNI:41032589</p>
-                    </div>
-                </div>
-                <a href="" id="link__pintado"><img src="../iconos/menu/home.svg" alt="" srcset=""><span class="icono__texto">Inicio</span></a>
-                <a href=""><img src="../iconos/menu/bus.svg" alt="" srcset=""><span class="icono__texto">Vehiculos</span></a>
-                <a href=""><img src="../iconos/menu/escudo.svg" alt="" srcset=""><span class="icono__texto">Multas</span></a>
-                <a href=""><img src="../iconos/menu/reloj.svg" alt="" srcset=""><span class="icono__texto">Historial</span></a>
-                <a href=""><img src="../iconos/menu/ayuda.svg" alt="" srcset=""><span class="icono__texto">Ayuda</span></a>
-                <a href=""><img src="../iconos/menu/salir.svg" alt="" srcset=""><span class="icono__texto">Salir</span></a>
-            </div>
-            <div class="cuerpo__asignar">
-                <h1>Indique quien realiza la verificacion</h1>
-
-                <div class="cuerpo__asignar__div">
-                    <label class="input__asignar">
-                        <input type="checkbox"><span class="checkmark"></span> Sera realizada por el titular 
-                    </label>
-                    <label class="input__asignar">
-                        <input type="checkbox"><span class="checkmark"></span> Sera realizada por un tercero
-                    </label>
-                    <a href="#" class="asignar__boton">Confirmacion selección</a>
-                </div>
-            </div> 
+          <div class="cuerpo__asignar__div">
+            <label class="input__asignar">
+              <input type="checkbox" /><span class="checkmark"></span> Sera
+              realizada por el titular
+            </label>
+            <label class="input__asignar">
+              <input type="checkbox" /><span class="checkmark"></span> Sera
+              realizada por un tercero
+            </label>
+          </div>
+          <a href="./asignar_tercero.html" class="asignar__boton">Siguiente</a>
         </div>
-
-        
-        
+      </div>
     </main>
 
     <footer class="pie">
-        <div class="pie__contenedor">
-            <div class="pie__columna" id="mapa__computadora">
-                <img src="../imagenes/mapa_computadora.svg" class="pie__mapa" alt="mapa">
-            </div>
-    
-            <div class="pie__columna">
-                <h3>Secciones</h3>
-                <p>Ayuda</p>
-                <p>Plantas</p>
-                <p>Reserva tu turno</p>
-                <p>Cancelar turno</p>
-            </div>
-            <div class="pie__columna">
-                <h3>Contacto</h3>
-                <p><img src="../iconos/correo.svg" alt="correo"> Correo electronico</p>
-                <p><img src="../iconos/whatsapp.svg" alt="whatssap"> Whatsapp</p>
-            </div>
-            <div class="pie__columna">
-                <h3>Redes</h3>
-                <p><img src="../iconos/twitter.svg" alt="correo"> Twitter (X)</p>
-                <p><img src="../iconos/youtube.svg" alt="whatssap"> Youtube</p>
-                <p><img src="../iconos/instagram.svg" alt="correo"> Instagram</p>
-                <p><img src="../iconos/facebook.svg" alt="whatssap"> Facebook</p>
-            </div>
-            <div class="pie__columna" id="mapa__celular">
-                <img src="../imagenes/mapa_celular.svg" class="pie__mapa" alt="mapa">
-            </div>
+      <div class="pie__contenedor">
+        <div class="pie__columna" id="mapa__computadora">
+          <img
+            src="../imagenes/mapa_computadora.svg"
+            class="pie__mapa"
+            alt="mapa"
+          />
         </div>
-        <div class="derechos__reservados">
-            <p class="p__celular">&#169; Departamento del Oeste - 2024</p>
-            <p class="p__celular">Todos los derechos Reservados</p>
- 
-            <p class="p__computadora">&#169; Departamento del Oeste - 2024 Todos los derechos Reservados</p>
+
+        <div class="pie__columna">
+          <h3>Secciones</h3>
+          <p>Ayuda</p>
+          <p>Plantas</p>
+          <p>Reserva tu turno</p>
+          <p>Cancelar turno</p>
         </div>
+        <div class="pie__columna">
+          <h3>Contacto</h3>
+          <p>
+            <img src="../iconos/correo.svg" alt="correo" /> Correo electronico
+          </p>
+          <p><img src="../iconos/whatsapp.svg" alt="whatssap" /> Whatsapp</p>
+        </div>
+        <div class="pie__columna">
+          <h3>Redes</h3>
+          <p><img src="../iconos/twitter.svg" alt="correo" /> Twitter (X)</p>
+          <p><img src="../iconos/youtube.svg" alt="whatssap" /> Youtube</p>
+          <p><img src="../iconos/instagram.svg" alt="correo" /> Instagram</p>
+          <p><img src="../iconos/facebook.svg" alt="whatssap" /> Facebook</p>
+        </div>
+        <div class="pie__columna" id="mapa__celular">
+          <img
+            src="../imagenes/mapa_celular.svg"
+            class="pie__mapa"
+            alt="mapa"
+          />
+        </div>
+      </div>
+      <div class="derechos__reservados">
+        <p class="p__celular">&#169; Departamento del Oeste - 2024</p>
+        <p class="p__celular">Todos los derechos Reservados</p>
+
+        <p class="p__computadora">
+          &#169; Departamento del Oeste - 2024 Todos los derechos Reservados
+        </p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
